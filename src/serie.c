@@ -210,6 +210,45 @@ gchar *Config_port(void)
 	case 115200:
 	    termios_p.c_cflag = B115200;
 	    break;
+	case 230400:
+	    termios_p.c_cflag = B230400;
+	    break;
+	case 460800:
+	    termios_p.c_cflag = B460800;
+	    break;
+	case 500000:
+	    termios_p.c_cflag = B500000;
+	    break;
+	case 576000:
+	    termios_p.c_cflag = B576000;
+	    break;
+	case 921600:
+	    termios_p.c_cflag = B921600;
+	    break;
+	case 1000000:
+	    termios_p.c_cflag = B1000000;
+	    break;
+	case 1152000:
+	    termios_p.c_cflag = B1152000;
+	    break;
+	case 1500000:
+	    termios_p.c_cflag = B1500000;
+	    break;
+	case 2000000:
+	    termios_p.c_cflag = B2000000;
+	    break;
+	case 2500000:
+	    termios_p.c_cflag = B2500000;
+	    break;
+	case 3000000:
+	    termios_p.c_cflag = B3000000;
+	    break;
+	case 3500000:
+	    termios_p.c_cflag = B3500000;
+	    break;
+	case 4000000:
+	    termios_p.c_cflag = B4000000;
+	    break;
 
 	default:
 	    set_custom_speed(config.vitesse, serial_port_fd);
