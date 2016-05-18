@@ -1488,7 +1488,7 @@ void Config_Terminal(GtkAction *action, gpointer data)
     Label = gtk_label_new("Scrollback lines:");
     gtk_box_pack_start(GTK_BOX(BoiteH), Label, FALSE, TRUE, 0);
     Entry = gtk_entry_new();
-    gtk_entry_set_max_length(GTK_ENTRY(Entry), 4);
+    gtk_entry_set_max_length(GTK_ENTRY(Entry), 9); /* 10^9 < gint.max(2,147,483,647) */
     scrollback =  g_strdup_printf("%d", term_conf.scrollback);
     gtk_entry_set_text(GTK_ENTRY(Entry), scrollback);
     g_free(scrollback);
